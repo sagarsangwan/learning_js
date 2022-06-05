@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Stylesheet  -->
+{% block styles %}
+<link rel="stylesheet" href="/static/css/style.css">
+{% endblock styles %}
+
+<!-- Main content  -->
+{% block content %}
+<style>
+    * {
+        color: black;
+    }
+</style>
+<div class="keys">
+    <div class="key">
+        <kbd>A</kbd>
+        <span class="sound">CLAP</span>
+    </div>
+</div>
+
+{% endblock content %}

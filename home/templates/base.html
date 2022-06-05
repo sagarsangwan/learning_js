@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon  -->
+  <link rel="icon" type="image/x-icon" href="https://delan5sxrj8jj.cloudfront.net/misc/favicon.ico" />
+
+  <!-- Stylesheet -->
+
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+
+  {% block styles %}{% endblock styles %}
+
+  <title>Teachoo | Learn Maths, Science, English, GST, Tally</title>
+</head>
+
+<body> {% block content %}
+  {% endblock content %}
+
+
+  {% block script %}
+
+  {% endblock %}
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!-- JQuery Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- Website scripts -->
+  <script defer>
+    // Teachoo pronunciation
+    svg = document.getElementsByTagName("svg")[0];
+    myAudio = document.getElementById("teachoo-audio");
+    document
+      .getElementById("play-teachoo")
+      .addEventListener("click", function () {
+        svg.style.fill = "#0BB2AD";
+        console.log("Playing audio!");
+        myAudio.play();
+      });
+
+    myAudio.addEventListener("ended", function () {
+      svg.style.fill = "rgb(96 96 96)";
+    });
+
+    $(".search-icon").click(function () {
+      $(".search-input").css("width", "240px");
+      $(".cross-icon").css("opacity", "1");
+      $(".search-icon").css("opacity", "0");
+    });
+
+    $(".cross-icon").click(function () {
+      $(".search-input").css("width", "0");
+      $(".search-icon").css("opacity", "1");
+      $(".cross-icon").css("opacity", "0");
+    });
+
+    $(".search-icon-sm").click(function () {
+      $(".search-bar-sm").slideToggle();
+    });
+  </script>
+</body>
+
+</html>

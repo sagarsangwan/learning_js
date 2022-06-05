@@ -4,5 +4,4 @@ from django.shortcuts import render
 
 
 def home_page(request):
-    pass
-    return render(request, 'pages/drum-kit-home.html')
+    return render(request, 'home/home.html')

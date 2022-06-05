@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Stylesheet  -->
+{% block styles %}
+{% endblock styles %}
+
+<!-- Main content  -->
+{% block content %}
+<style>
+    * {
+        color: black;
+    }
+</style>
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron ">
+                <h1>Welcome to the Home Page</h1>
+                <p>
+                    This is the home page of the application.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="/drum-kit/">Drum Kit</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
